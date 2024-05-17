@@ -1,0 +1,16 @@
+<div id="<%= dom_id product %>">
+  <div class="card" style="width: 18rem;">
+    <%= image_tag product.image if product.image.attached? %>
+    <div class="card-body">
+      <h3><strong><%= product.name %></strong></h3>
+      <p class="card-text"><%= product.description %></p>
+      <p><%= number_to_currency product.price %></p>
+      <p><%= link_to "Show this product", product, class: "btn btn-primary" %></p>
+     
+          <%= form_tag add_to_cart_path(product.id), method: :post do %>
+            <%= submit_tag "Add to Cart" %>
+          <% end %>
+
+    </div>
+  </div>
+</div>

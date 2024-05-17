@@ -1,0 +1,9 @@
+<h1>Your Shopping Cart</h1>
+<% if @cart.nil? %>
+        <h1>Your cart is empty.</h1>
+    <% else %>
+        <% @cart.each do |item| %>
+            <%= render "/shared/cart_item" %>
+        <% end%>
+<% end %>
+

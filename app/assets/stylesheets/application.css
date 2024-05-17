@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ .amazoon_pagination {
+    background: white;
+    cursor: default;
+    /* self-clearing method: */ }
+    .amazoon_pagination a, .amazoon_pagination span, .amazoon_pagination em {
+      padding: 0.2em 0.5em;
+      display: block;
+      float: left;
+      margin-right: 1px; }
+    .amazoon_pagination .disabled {
+      color: #999999;
+      border: 1px solid #dddddd; }
+    .amazoon_pagination .current {
+      font-style: normal;
+      font-weight: bold;
+      background: #2e6ab1;
+      color: white;
+      border: 1px solid #2e6ab1; }
+    .amazoon_pagination a {
+      text-decoration: none;
+      color: #105cb6;
+      border: 1px solid #9aafe5; }
+      .amazoon_pagination a:hover, .amazoon_pagination a:focus {
+        color: #000033;
+        border-color: #000033; }
+    .amazoon_pagination .page_info {
+      background: #2e6ab1;
+      color: white;
+      padding: 0.4em 0.6em;
+      width: 22em;
+      margin-bottom: 0.3em;
+      text-align: center; }
+      .amazoon_pagination .page_info b {
+        color: #000033;
+        background: #6aa6ed;
+        padding: 0.1em 0.25em; }
+    .amazoon_pagination:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    * html .amazoon_pagination {
+      height: 1%; }
+    *:first-child + html .amazoon_pagination {
+      overflow: hidden; }

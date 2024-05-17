@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+  <h1>Products</h1>
+  <br>
+    <div class="row">
+    <% @products.each do |product| %>
+    <div class="col-md-3">
+      <%= render product %>
+      
+    </div>
+    <% end %>
+  </div>
+
+</div>
+  <div class="container d-flex justify-content-center py-5">
+    <%= will_paginate @products, class: "amazoon_pagination" %>
+  </div>
+
+
+ 
+  
+</div>
+
